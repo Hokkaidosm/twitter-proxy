@@ -1,0 +1,26 @@
+#begin common
+RewriteEngine on
+RewriteBase /
+#end common
+
+#begin git ignore
+<Files ~ "^\.git">
+    Order allow,deny
+    Deny from all
+</Files>
+#end git ignore
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+    Order allow,deny
+    deny from all
+</Files>
+
+#start rewritedone
+RewriteCond %{QUERY_STRING} rewrite=done$
+RewriteRule .+ - [L]
+#end rewritedone
+
+RewriteCond %{QUERY_STRING} ^redirect_after_login=%2F([0-9a-zA-Z_]+)
+RewriteRule ^i/flow/login$ profile.php?name=%1&rewrite=done [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)$ profile.php?name=$1&rewrite=done [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)/status/([0-9]+)$ tweet.php?name=$1&id=$2&rewrite=done [QSA,L]
