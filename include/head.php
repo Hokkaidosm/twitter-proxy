@@ -16,8 +16,9 @@ require_once("common.php");
 <link rel="icon" type="image/png" sizes="16x16" href="<?= resourceWithTs("favicon-16x16.png") ?>" />
 <link rel="manifest" href="<?= resourceWithTs("site.webmanifest") ?>" />
 <link rel="mask-icon" href="<?= resourceWithTs("safari-pinned-tab.svg") ?>" color="#ffffff" />
-<meta name="apple-mobile-web-app-title" content="hokkaidosm.net プリキュアデータ" />
-<meta name="application-name" content="hokkaidosm.net プリキュアデータ" />
+<meta name="apple-mobile-web-app-title" content="twitter-proxy" />
+<meta name="application-name" content="twitter-proxy" />
 <meta name="msapplication-TileColor" content="#ffffff" />
 <meta name="msapplication-TileImage" content="<?= resourceWithTs("mstile-144x144.png") ?>" />
 <meta name="theme-color" content="#ffffff" />
+<meta name="description" content="非ログイン時でもツイートを見ることができるサイト" />
