@@ -22,8 +22,8 @@ if (is_null($name)) {
 
 <body>
     <main>
-        <p><a class="twitter-timeline" href="https://twitter.com/<?= h($name) ?>?ref_src=twsrc%5Etfw" data-tweet-limit="20" data-dnt="true">Tweets by <?= h($name) ?></a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <p><a class="twitter-timeline" href="https://twitter.com/<?= h($name) ?>?ref_src=twsrc%5Etfw" data-tweet-limit="20" data-dnt="true" data-handle="<?= h($name) ?>"></a>
+            <script src="https://www.athabasca.dev/content/scripts/widget.js" charset="utf-8"></script>
         </p>
     </main>
     <?php require_once("./include/footer.php"); ?>
